@@ -1,0 +1,385 @@
+.container-dashboard h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3.75rem;
+  color: #1E1E1E;
+  font-family: "DM Sans", serif;
+  padding-top: 60px;
+}
+
+.container-dashboard {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  margin: 0; 
+  padding: 0;
+  background: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+}
+
+.propm-input textarea {
+    resize: none;
+    height: auto;
+    outline: none;
+    padding-top: 15px;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-right: 45px;
+    min-width: 600px;
+    min-height: 40px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    border: 2px solid #c9c9c9;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+.propm-input button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.propm-input button:hover {
+    border-radius: 50%;
+    background-color: #f3f4f6;
+}
+
+.input-container2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.propm-input2 {
+  position: relative;
+  width: 47%;
+  max-width: 1000px;
+  height: calc(100vh - 180px); /* atur tinggi atau lebar chat */
+  overflow-y: auto;
+  padding: 0 20px 100px 20px;
+  margin-bottom: 80px;
+  /* Hide scrollbar for Chrome, Safari, Opera */
+  &::-webkit-scrollbar {
+      display: none;
+  }
+  /* Hide scrollbar for IE, Edge, Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.propm-input2 textarea {
+    resize: none;
+    height: auto;
+    outline: none;
+    padding-top: 15px;
+    padding-right: 45px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    min-width: 600px;
+    min-height: 60px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    border: 2px solid #c9c9c9;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+.promptComponent button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: -50px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.promptComponent button:hover {
+    border-radius: 50%;
+    background-color: #f3f4f6;
+}
+
+.promptComponent {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-43%);
+    width: 100%;
+    max-width: 800px;
+    z-index: 999;
+    padding: 15px;
+}
+
+
+.databsae-connection {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px;
+  z-index: 1000;
+    
+}
+
+.databsae-connection svg {
+    margin-right: 10px;
+}
+
+.disconect-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.disconect-button svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+
+.disconect-button2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: static;
+  transform: translateX(20%);
+  z-index: 1001;
+}
+
+.disconect-button2 svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+
+.container-chat {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Changed from 1200px */
+  height: 100vh;
+  margin: 0;  /* Remove auto margin */
+  padding: 0;  /* Remove padding */
+  background: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.bubble-wrapper {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.sender-wrapper {
+  justify-content: flex-end;
+  padding-left: 45%;
+
+}
+
+.receiver-wrapper {
+  justify-content: flex-start;
+  padding-right: 45%;
+}
+
+.bubble {
+  min-width: 50%;
+  padding: 8px 16px;
+  margin-top: 40px;
+  border-radius: 16px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.sender-bubble {
+  background-color: #9cfc84;
+  color: #1f2937;
+  border-bottom-right-radius: 4px;
+}
+
+.receiver-bubble {
+  background-color: #ffffff;
+  color: #1f2937;
+  border-bottom-left-radius: 4px;
+}
+
+  .container-dashboard,
+.container-chat {
+  position: absolute;
+  width: 100%;
+  transition: all 0.1s ease-in-out;
+  opacity: 1;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container-dashboard h1 {
+      font-size: 2rem;
+      padding-top: 30px;
+  }
+
+  .propm-input {
+    position: relative;
+    width: 90%;
+    max-width: none;
+    margin: 0 auto;
+}
+
+.propm-input textarea {
+    width: 90%;
+    min-width: auto;
+    max-width: 100%;
+    height: auto;
+    padding: 12px 40px 12px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.propm-input button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-200%);
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+  .propm-input2 textarea {
+      min-width: 300px;
+      font-size: 1rem;
+  }
+
+  .propm-input2 {
+      width: 90%;
+      padding: 0 10px 80px 10px;
+  }
+
+  .promptComponent {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .promptComponent textarea {
+      width: 85%;
+      min-width: auto;
+      padding: 10px 35px 10px 15px;
+      font-size: 1rem;
+  }
+
+  .promptComponent button {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 25px;
+      margin: 0;
+  }
+
+  .sender-wrapper {
+      padding-left: 20%;
+  }
+
+  .receiver-wrapper {
+      padding-right: 20%;
+  }
+
+  .bubble {
+      min-width: 80%;
+      margin-top: 20px;
+  }
+
+  .databsae-connection {
+      padding: 5px;
+  }
+
+  .disconect-button2 {
+      transform: none;
+  }
+
+  .ComponentButton2 {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .propm-input {
+    width: 80%;
+  }
+
+  .propm-input textarea {
+    font-size: 14px;
+    padding: 10px 35px 10px 12px;
+  }
+
+  .propm-input button {
+    right: 8px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .promptComponent {
+    width: 90%;
+    padding: 8px;
+  }
+
+  .sender-wrapper {
+    padding-left: 10%;
+  }
+
+  .receiver-wrapper {
+    padding-right: 10%;
+  }
+
+  .bubble {
+    min-width: 90%;
+  }
+}
